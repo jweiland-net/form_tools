@@ -1,0 +1,8 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          finishersDefinition:
+            StoreFieldsAsXmlToDb:
+              implementationClassName: JWeiland\FormTools\Finisher\StoreFieldsAsXmlToDbFinisher
