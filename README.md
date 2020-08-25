@@ -18,7 +18,7 @@ The recommended way to install the extension is using Composer.
 Run the following command within your Composer based TYPO3 project:
 
 ```
-composer require jweiland/form_tools
+composer require jweiland/form-tools
 ```
 
 #### Installation as extension from TYPO3 Extension Repository (TER)
