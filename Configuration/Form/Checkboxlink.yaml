@@ -1,0 +1,37 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            dynamicRequireJsModules:
+              additionalViewModelModules:
+                - 'TYPO3/CMS/FormTools/Backend/FormEditor/CheckboxlinkViewmodel'
+            formEditorPartials:
+              FormElement-Checkboxlink: 'Stage/SimpleTemplate'
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  1598423167356: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Templates/'
+                partialRootPaths:
+                  1598423167356: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Partials/'
+                layoutRootPaths:
+                  1598423167356: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Layouts/'
+            Checkboxlink:
+              __inheritances:
+                10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
+              formEditor:
+                label: 'Datenschutzhinweis'
+                group: custom
+                groupSorting: 1010
+                iconIdentifier: 'Checkboxlink-icon'
+                predefinedDefaults:
+                  properties:
+                    value: '1'
+                editors:
+                  300:
+                    identifier: 'value'
+                    templateName: 'Inspector-TextEditor'
+                    label: 'Antwort'
+                    propertyPath: 'properties.test'
