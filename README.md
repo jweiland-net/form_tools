@@ -1,7 +1,6 @@
 # TYPO3 Extension `form_tools`
 
-Events2 is an extension for TYPO3 CMS. It shows you a list of event entries incl.
-detail view.
+Form_tools is an extension for TYPO3 CMS. It collects some tools for the TYPO3 FormFramework.
 
 ## 1 Features
 
@@ -31,3 +30,5 @@ Download and install `form_tools` with the extension manager module.
 2) Open your TypoScript file or record
 3) Add: `plugin.tx_form.settings.yamlConfigurations.1234 = EXT:form_tools/Configuration/Form/StoreAsXml.yaml`
 4) Now you can use our finisher with identifier: `StoreFieldsAsXmlToDb`
+5) Add: `plugin.tx_form.settings.yamlConfigurations.2345 = EXT:form_tools/Configuration/Form/Checkboxlink.yaml`
+6) Now you can use the form element with type: `Checkboxlink`
