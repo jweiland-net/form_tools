@@ -38,3 +38,34 @@ of EXT:form
            subject:
              value: 'Default Subject from YAML'
        identifier: StoreFieldsAsXmlToDb
+
+Renderables
+===========
+
+Checkboxlink
+------------
+
+First of all you have to load our YAML file which contains a configuration to register
+our form element to EXT:form
+
+.. code-block:: typoscript
+
+   plugin.tx_form.settings.yamlConfigurations.2345 = EXT:form_tools/Configuration/Form/Checkboxlink.yaml
+
+Now you can use our form element
+of EXT:form
+
+.. code-block:: yaml
+
+   renderables:
+      -
+        type: Checkboxlink
+        identifier: dsgvo
+        label: 'Datenschutzerklärung gelesen'
+        validators:
+          -
+            identifier: NotEmpty
+        properties:
+          value: '1'
+          fluidAdditionalAttributes:
+            required: required
