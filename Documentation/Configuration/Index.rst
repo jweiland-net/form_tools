@@ -17,7 +17,7 @@ our finisher to EXT:form
 
 .. code-block:: typoscript
 
-   plugin.tx_form.settings.yamlConfigurations.100 = EXT:form_tools/Configuration/Form/StoreAsXml.yaml
+   plugin.tx_form.settings.yamlConfigurations.1234 = EXT:form_tools/Configuration/Form/StoreAsXml.yaml
 
 Now you can use our finisher with the same configuration which is valid for SaveToDatabase finisher
 of EXT:form

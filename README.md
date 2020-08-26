@@ -29,5 +29,5 @@ Download and install `form_tools` with the extension manager module.
 
 1) Check if DB table `tx_formtools_requests` was created successfully
 2) Open your TypoScript file or record
-3) Add: `plugin.tx_form.settings.yamlConfigurations.100 = EXT:form_tools/Configuration/Form/StoreAsXml.yaml`
+3) Add: `plugin.tx_form.settings.yamlConfigurations.1234 = EXT:form_tools/Configuration/Form/StoreAsXml.yaml`
 4) Now you can use our finisher with identifier: `StoreFieldsAsXmlToDb`
