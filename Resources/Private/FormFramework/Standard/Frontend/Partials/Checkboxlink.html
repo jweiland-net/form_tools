@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<formvh:renderRenderable renderable="{element}">
+    <f:render partial="Field/Field" arguments="{element: element, doNotShowLabel: 1}" contentAs="elementContent">
+        <div class="form-check">
+            <label class="{element.properties.elementClassAttribute} form-check-label" for="{element.uniqueIdentifier}">
+                <f:form.checkbox
+                        property="{element.identifier}"
+                        id="{element.uniqueIdentifier}"
+                        class="{element.properties.elementClassAttribute}"
+                        value="{element.properties.value}"
+                        errorClass="{element.properties.elementErrorClassAttribute}"
+                        additionalAttributes="{formvh:translateElementProperty(element: element, property: 'fluidAdditionalAttributes')}"
+                />
+                <f:comment>
+                    <!--
+                    Das "{formvh:translateElementProperty(element: element, property: 'label')}" ist der Text aus der YAML Datei,
+                    welcher in der Vorschau und E-Mail angezeigt wird. Diesen Text blenden wir hier im Partial aus.
+                    Angezeigt wird hier auf der Webseite nur der Text, bei dem das Wort "Datenschutzhinweis" verlinkt ist.
+
+                    {formvh:translateElementProperty(element: element, property: 'label')}
+                    -->
+                </f:comment>
+                <span>Ich habe die <f:link.page pageUid="{f:cObject(typoscriptObjectPath:'lib.formLegalUid')}" target="_blank">Datenschutzerklärung</f:link.page> gelesen und stimme dieser zu. <f:if condition="{element.required}"><f:render partial="Field/Required" /></f:if></span>
+            </label>
+        </div>
+    </f:render>
+</formvh:renderRenderable>
+</html>
