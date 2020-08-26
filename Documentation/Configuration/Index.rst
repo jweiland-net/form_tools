@@ -37,7 +37,15 @@ of EXT:form
          databaseColumnMappings:
            subject:
              value: 'Default Subject from YAML'
+           pid:
+             value: 1
+           tstamp:
+             value: '{__currentTimestamp}'
+           crdate:
+             value: '{__currentTimestamp}'
        identifier: StoreFieldsAsXmlToDb
+
+Set the value of pid to your page/folder where the mails should be found in the BackEnd.
 
 Renderables
 ===========

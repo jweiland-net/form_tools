@@ -32,4 +32,11 @@ Download and install `form_tools` with the extension manager module.
 3) Add: `plugin.tx_form.settings.yamlConfigurations.1234 = EXT:form_tools/Configuration/Form/StoreAsXml.yaml`
 4) Now you can use our finisher with identifier: `StoreFieldsAsXmlToDb`
 5) Add: `plugin.tx_form.settings.yamlConfigurations.2345 = EXT:form_tools/Configuration/Form/Checkboxlink.yaml`
-6) Now you can use the form element with type: `Checkboxlink`
+6) Add: `module.tx_form.settings.yamlConfigurations.2345 = EXT:form_tools/Configuration/Form/Checkboxlink.yaml`
+7) Add: 
+   ```
+    lib.formLegalUid = TEXT
+    lib.formLegalUid.value = 1 # or e.g.: {$form.legalUid}
+   ```
+   to your SETUP and define a target for the "Data protection notice" link.
+7) Now you can use the form element with type: `Checkboxlink`
