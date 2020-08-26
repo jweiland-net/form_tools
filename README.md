@@ -5,6 +5,7 @@ Form_tools is an extension for TYPO3 CMS. It collects some tools for the TYPO3 F
 ## 1 Features
 
 * It contains a form finisher to store all form fields as XML structure in DB
+* It contains a form element to set up a GDPR link in your form (works with the form editor)
 
 ## 2 Usage
 
