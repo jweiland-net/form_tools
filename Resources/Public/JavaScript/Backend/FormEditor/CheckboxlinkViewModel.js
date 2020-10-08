@@ -1,4 +1,4 @@
-// Resources/Public/JavaScript/Backend/FormEditor/CheckboxlinkViewmodel.js
+// Resources/Public/JavaScript/Backend/FormEditor/CheckboxlinkViewModel.js
 
 define([
     'jquery',
