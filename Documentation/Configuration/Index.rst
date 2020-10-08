@@ -45,7 +45,7 @@ of EXT:form
              value: '{__currentTimestamp}'
        identifier: StoreFieldsAsXmlToDb
 
-Set the value of pid to your page/folder where the mails should be found in the BackEnd.
+Set the value of pid to your page/folder where the mails should be found in the Backend.
 
 Renderables
 ===========
