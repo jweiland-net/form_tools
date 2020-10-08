@@ -6,7 +6,7 @@ TYPO3:
           formEditor:
             dynamicRequireJsModules:
               additionalViewModelModules:
-                - 'TYPO3/CMS/FormTools/Backend/FormEditor/CheckboxlinkViewmodel'
+                - 'TYPO3/CMS/FormTools/Backend/FormEditor/CheckboxlinkViewModel'
             formEditorPartials:
               FormElement-Checkboxlink: 'Stage/SimpleTemplate'
           formElementsDefinition:
