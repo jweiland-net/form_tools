@@ -2,12 +2,12 @@
 return [
     'ctrl' => [
         'title' => 'Stored Forms',
-        'label' => 'email',
+        'label' => 'last_name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'dividers2tabs' => true,
-        'default_sortby' => 'ORDER BY email',
+        'default_sortby' => 'ORDER BY tstamp',
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'languageField' => 'sys_language_uid',
@@ -19,14 +19,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'email, subject, content, xml',
+        'searchFields' => 'first_name, last_name, telephone, address, city, email, message, xml',
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, email, subject, content, xml',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, first_name, last_name, telephone, address, city, email, message, xml',
     ],
     'types' => [
         '0' => [
-            'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, email, subject, content, xml,
+            'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, first_name, last_name, telephone, address, city, email, message, xml,
             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access, 
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access',
         ],
@@ -125,6 +125,51 @@ return [
             'l10n_mode' => 'exclude',
             'l10n_display' => 'defaultAsReadonly'
         ],
+        'first_name' => [
+            'exclude' => true,
+            'label' => 'Vorname',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'last_name' => [
+            'exclude' => true,
+            'label' => 'Nachname',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'telephone' => [
+            'exclude' => true,
+            'label' => 'Telefon',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'address' => [
+            'exclude' => true,
+            'label' => 'Strasse Hausnummer',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'city' => [
+            'exclude' => true,
+            'label' => 'PLZ Ort',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
         'email' => [
             'exclude' => true,
             'label' => 'E-Mail',
@@ -134,18 +179,9 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'subject' => [
+        'message' => [
             'exclude' => true,
-            'label' => 'Subject',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'content' => [
-            'exclude' => true,
-            'label' => 'Content',
+            'label' => 'Nachricht',
             'config' => [
                 'type' => 'text',
                 'cols' => 50,
