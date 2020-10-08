@@ -3,8 +3,8 @@
       data-namespace-typo3-fluid="true">
 <formvh:renderRenderable renderable="{element}">
     <f:render partial="Field/Field" arguments="{element: element, doNotShowLabel: 1}" contentAs="elementContent">
-        <div class="form-check">
-            <label class="{element.properties.elementClassAttribute} form-check-label" for="{element.uniqueIdentifier}">
+        <div class="form-check checkboxlink">
+            <label class="{element.properties.elementClassAttribute} form-check-label checkboxlink" for="{element.uniqueIdentifier}">
                 <f:form.checkbox
                         property="{element.identifier}"
                         id="{element.uniqueIdentifier}"
