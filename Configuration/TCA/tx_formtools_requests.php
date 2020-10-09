@@ -129,7 +129,7 @@ return [
         ],
         'first_name' => [
             'exclude' => true,
-            'label' => 'Vorname',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.first_name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -138,7 +138,7 @@ return [
         ],
         'last_name' => [
             'exclude' => true,
-            'label' => 'Nachname',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.last_name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -147,7 +147,7 @@ return [
         ],
         'telephone' => [
             'exclude' => true,
-            'label' => 'Telefon',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.phone',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -156,7 +156,7 @@ return [
         ],
         'address' => [
             'exclude' => true,
-            'label' => 'Strasse Hausnummer',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.address',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -165,7 +165,7 @@ return [
         ],
         'city' => [
             'exclude' => true,
-            'label' => 'PLZ Ort',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.zip LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.city',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -174,7 +174,7 @@ return [
         ],
         'email' => [
             'exclude' => true,
-            'label' => 'E-Mail',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.email',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -183,7 +183,7 @@ return [
         ],
         'message' => [
             'exclude' => true,
-            'label' => 'Nachricht',
+            'label' => 'LLL:EXT:sys_note/Resources/Private/Language/locallang_tca.xlf:sys_note.message',
             'config' => [
                 'type' => 'text',
                 'cols' => 50,
@@ -192,7 +192,7 @@ return [
         ],
         'xml' => [
             'exclude' => true,
-            'label' => 'Content',
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media.dataAttributes.content',
             'config' => [
                 'type' => 'text',
                 'cols' => 50,
