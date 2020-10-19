@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools">
+        <header/>
+        <body>
+            <trans-unit id="tx_formtools_requests.first_name" resname="tx_formtools_requests.first_name">
+				<source>First name</source>
+			</trans-unit>
+            <trans-unit id="tx_formtools_requests.last_name" resname="tx_formtools_requests.last_name">
+                <source>Last name</source>
+            </trans-unit>
+            <trans-unit id="tx_formtools_requests.phone" resname="tx_formtools_requests.phone">
+                <source>Phone</source>
+            </trans-unit>
+            <trans-unit id="tx_formtools_requests.address" resname="tx_formtools_requests.address">
+                <source>Street, number</source>
+            </trans-unit>
+            <trans-unit id="tx_formtools_requests.city" resname="tx_formtools_requests.city">
+                <source>ZIP city</source>
+            </trans-unit>
+            <trans-unit id="tx_formtools_requests.email" resname="tx_formtools_requests.email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tx_formtools_requests.message" resname="tx_formtools_requests.message">
+                <source>Message</source>
+            </trans-unit>
+            <trans-unit id="tx_formtools_requests.xml" resname="tx_formtools_requests.xml">
+                <source>Content</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
