@@ -129,7 +129,7 @@ return [
         ],
         'first_name' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.first_name',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.first_name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -138,7 +138,7 @@ return [
         ],
         'last_name' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.last_name',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.last_name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -147,7 +147,7 @@ return [
         ],
         'telephone' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.phone',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.phone',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -156,7 +156,7 @@ return [
         ],
         'address' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.address',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.address',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -165,7 +165,7 @@ return [
         ],
         'city' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.zip LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.city',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.city',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -174,7 +174,7 @@ return [
         ],
         'email' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.email',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.email',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -183,7 +183,7 @@ return [
         ],
         'message' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:sys_note/Resources/Private/Language/locallang_tca.xlf:sys_note.message',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.message',
             'config' => [
                 'type' => 'text',
                 'cols' => 50,
@@ -192,7 +192,7 @@ return [
         ],
         'xml' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media.dataAttributes.content',
+            'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.xml',
             'config' => [
                 'type' => 'text',
                 'cols' => 50,
