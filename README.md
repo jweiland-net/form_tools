@@ -40,3 +40,43 @@ Download and install `form_tools` with the extension manager module.
    ```
    to your SETUP and define a target for the "Data protection notice" link.
 7) Now you can use the form element with type: `Checkboxlink`
+
+### 2.3 Finisher StoreFieldsAsXmlToDb
+
+Copy the finisher to your form YAML file.
+
+```
+
+  -
+    options:
+      -
+        table: tx_formtools_requests
+        mode: insert
+        elements:
+          text-1:
+            mapOnDatabaseColumn: first_name
+          name:
+            mapOnDatabaseColumn: last_name
+          telefon:
+            mapOnDatabaseColumn: telephone
+          strasse:
+            mapOnDatabaseColumn: address
+          plzort:
+            mapOnDatabaseColumn: city
+          email:
+            mapOnDatabaseColumn: email
+          textarea-2:
+            mapOnDatabaseColumn: message
+        databaseColumnMappings:
+          pid:
+            value: 12107
+          tstamp:
+            value: '{__currentTimestamp}'
+          crdate:
+            value: '{__currentTimestamp}'
+    identifier: StoreFieldsAsXmlToDb
+```
+
+* Some fields like `first_name` till `message` already exist in the Datatbase. You can map your renderables to them.
+* Set the pid where your mails should be saved (e.g. the same where your plugin resides).
+* The database field `xml` will automaticaly contain all posted data.
