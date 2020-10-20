@@ -22,6 +22,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'first_name, last_name, telephone, address, city, email, message, xml',
+        'iconfile' => 'EXT:form_tools/Resources/Public/Icons/tx_formtools_requests.svg',
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, first_name, last_name, telephone, address, city, email, message, xml',
