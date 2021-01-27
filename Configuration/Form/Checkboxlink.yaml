@@ -13,11 +13,11 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  1598423167356: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Templates/'
+                  1611740971: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Templates/'
                 partialRootPaths:
-                  1598423167356: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Partials/'
+                  1611740972: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Partials/'
                 layoutRootPaths:
-                  1598423167356: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Layouts/'
+                  1611740973: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Layouts/'
             Checkboxlink:
               __inheritances:
                 10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
