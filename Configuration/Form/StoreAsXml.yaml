@@ -3,6 +3,68 @@ TYPO3:
     Form:
       prototypes:
         standard:
+          formEditor:
+            # Translation files just for the form module / form wizard
+            translationFiles:
+              1611765566: 'EXT:form_tools/Resources/Private/Language/locallang_form_editor.xlf'
+          formEngine:
+            # Translation files just for the override columns in form plugin (BE)
+            translationFiles:
+              1611765567: 'EXT:form_tools/Resources/Private/Language/locallang_form_engine.xlf'
+          formElementsDefinition:
+            Form:
+              formEditor:
+                propertyCollections:
+                  finishers:
+                    300:
+                      identifier: StoreFieldsAsXmlToDb
+                      editors:
+                        100:
+                          identifier: header
+                          templateName: Inspector-CollectionElementHeaderEditor
+                          label: formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label
+                        200:
+                          identifier: pageUid
+                          templateName: Inspector-Typo3WinBrowserEditor
+                          label: formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label
+                          buttonLabel: formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel
+                          browsableType: pages
+                          iconIdentifier: apps-pagetree-page-default
+                          propertyPath: options.pageUid
+                          propertyValidatorsMode: OR
+                          propertyValidators:
+                            10: Integer
+                            20: FormElementIdentifierWithinCurlyBracesExclusive
+                        9999:
+                          identifier: removeButton
+                          templateName: Inspector-RemoveElementEditor
+                editors:
+                  900:
+                    selectOptions:
+                      300:
+                        value: StoreFieldsAsXmlToDb
+                        label: formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label
           finishersDefinition:
             StoreFieldsAsXmlToDb:
               implementationClassName: JWeiland\FormTools\Finisher\StoreFieldsAsXmlToDbFinisher
+              formEditor:
+                iconIdentifier: form-finisher
+                label: formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label
+                predefinedDefaults:
+                  options:
+                    pageUid: ''
+              FormEngine:
+                label: tt_content.finishersDefinition.StoreFieldsAsXmlToDb.label
+                elements:
+                  pageUid:
+                    label: tt_content.finishersDefinition.StoreFieldsAsXmlToDb.pageUid.label
+                    config:
+                      type: group
+                      internal_type: db
+                      allowed: pages
+                      size: 1
+                      minitems: 0
+                      maxitems: 1
+                      fieldWizard:
+                        recordsOverview:
+                          disabled: 1
