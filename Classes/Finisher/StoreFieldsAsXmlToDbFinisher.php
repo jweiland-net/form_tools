@@ -13,6 +13,7 @@ namespace JWeiland\FormTools\Finisher;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Form\Domain\Finishers\SaveToDatabaseFinisher;
+use TYPO3\CMS\Form\Domain\Model\FormElements\FormElementInterface;
 
 /*
  * This finisher is based on the SaveToDatabase finisher of EXT:form
@@ -21,6 +22,18 @@ use TYPO3\CMS\Form\Domain\Finishers\SaveToDatabaseFinisher;
  */
 class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
 {
+    /**
+     * @var array
+     */
+    protected $defaultOptions = [
+        'table' => 'tx_formtools_requests',
+        'mode' => 'insert',
+        'pageUid' => 0,
+        'whereClause' => [],
+        'elements' => [],
+        'databaseColumnMappings' => [],
+    ];
+
     /**
      * Prepare data for saving to database
      *
@@ -32,12 +45,34 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
     {
         $prepareData = parent::prepareData($elementsConfiguration, $databaseData);
 
-        $dataForXml = [
-            'elements' => []
-        ];
+        $dataForXml = ['elements' => []];
         $dataForXml['elements'] = $this->getFormValues();
+
         $prepareData['xml'] = GeneralUtility::array2xml($dataForXml);
 
+        // Get PID from FormWizard, TCEForms or fallback to default 0
+        $prepareData['pid'] = (int)$this->parseOption('pageUid');
+        if (empty($prepareData['pid'])) {
+            $prepareData['pid'] = (int)$GLOBALS['TSFE']->id;
+        }
+
         return $prepareData;
+    }
+
+    protected function getFormValues(): array
+    {
+        $elements = $this->finisherContext->getFormValues();
+        foreach ($elements as $elementIdentifier => $element) {
+            if (
+                $element instanceof \DateTime
+                && $this->getElementByIdentifier($elementIdentifier) instanceof FormElementInterface
+            ) {
+                $properties = $this->getElementByIdentifier($elementIdentifier)->getProperties();
+                $elements[$elementIdentifier] = $element->format(
+                    !empty($properties['dateFormat']) ? $properties['dateFormat'] : \DateTime::W3C
+                );
+            }
+        }
+        return $elements;
     }
 }
