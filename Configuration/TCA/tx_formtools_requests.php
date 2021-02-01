@@ -2,8 +2,8 @@
 return [
     'ctrl' => [
         'title' => 'Stored Forms',
-        'label' => 'last_name',
-        'label_alt' => 'first_name',
+        'label' => 'email',
+        'label_alt' => 'last_name, first_name',
         'label_alt_force' => true,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
