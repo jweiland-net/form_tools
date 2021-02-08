@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace JWeiland\FormTools\Finisher;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Form\Domain\Finishers\Exception\FinisherException;
 use TYPO3\CMS\Form\Domain\Finishers\SaveToDatabaseFinisher;
 use TYPO3\CMS\Form\Domain\Model\FormElements\FormElementInterface;
 
@@ -35,6 +36,27 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
     ];
 
     /**
+     * Executes this finisher
+     * @see AbstractFinisher::execute()
+     *
+     * @throws FinisherException
+     */
+    protected function executeInternal()
+    {
+        $options = [];
+        if (isset($this->options['pageUid'])) {
+            $options[] = $this->options;
+        } else {
+            $options = $this->options;
+        }
+
+        foreach ($options as $optionKey => $option) {
+            $this->options = $option;
+            $this->process($optionKey);
+        }
+    }
+
+    /**
      * Prepare data for saving to database
      *
      * @param array $elementsConfiguration
@@ -47,6 +69,7 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
 
         $dataForXml = ['elements' => []];
         $dataForXml['elements'] = $this->getFormValues();
+        $this->addEmailFromFormValues($prepareData, $dataForXml['elements']);
 
         $prepareData['xml'] = GeneralUtility::array2xml($dataForXml);
 
@@ -59,16 +82,36 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
         return $prepareData;
     }
 
+    protected function addEmailFromFormValues(array &$prepareData, array $elements = []): void
+    {
+        if ($prepareData['email']) {
+            return;
+        }
+
+        foreach ($elements as $elementIdentifier => $value) {
+            $element = $this->getElementByIdentifier($elementIdentifier);
+            if (
+                $element instanceof FormElementInterface
+                && $element->getType() === 'Email'
+                && !empty($value)
+                && GeneralUtility::validEmail($value)
+            ) {
+                $prepareData['email'] = $value;
+            }
+        }
+    }
+
     protected function getFormValues(): array
     {
         $elements = $this->finisherContext->getFormValues();
-        foreach ($elements as $elementIdentifier => $element) {
+        foreach ($elements as $elementIdentifier => $value) {
+            $element = $this->getElementByIdentifier($elementIdentifier);
             if (
-                $element instanceof \DateTime
-                && $this->getElementByIdentifier($elementIdentifier) instanceof FormElementInterface
+                $value instanceof \DateTime
+                && $element instanceof FormElementInterface
             ) {
-                $properties = $this->getElementByIdentifier($elementIdentifier)->getProperties();
-                $elements[$elementIdentifier] = $element->format(
+                $properties = $element->getProperties();
+                $elements[$elementIdentifier] = $value->format(
                     !empty($properties['dateFormat']) ? $properties['dateFormat'] : \DateTime::W3C
                 );
             }

@@ -27,6 +27,13 @@
 			<trans-unit id="tx_formtools_requests.xml" resname="tx_formtools_requests.xml">
 				<source>Content</source>
 			</trans-unit>
+
+			<trans-unit id="databaseMapping.default.description" resname="tx_formtools_requests.xml">
+				<source>This field will not be filled automatically in default configuration. To change that you have to configure "mapOnDatabaseColumn" in yaml.</source>
+			</trans-unit>
+			<trans-unit id="databaseMapping.email.description" resname="tx_formtools_requests.xml">
+				<source>This field will be filled automatically by the first found text field which is of type email. You can override that when you configure "mapOnDatabaseColumn" in yaml.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
