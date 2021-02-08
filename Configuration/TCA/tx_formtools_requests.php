@@ -131,6 +131,7 @@ return [
         'first_name' => [
             'exclude' => true,
             'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.first_name',
+            'description' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:databaseMapping.default.description',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -140,6 +141,7 @@ return [
         'last_name' => [
             'exclude' => true,
             'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.last_name',
+            'description' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:databaseMapping.default.description',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -149,6 +151,7 @@ return [
         'telephone' => [
             'exclude' => true,
             'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.phone',
+            'description' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:databaseMapping.default.description',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -158,6 +161,7 @@ return [
         'address' => [
             'exclude' => true,
             'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.address',
+            'description' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:databaseMapping.default.description',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -167,6 +171,7 @@ return [
         'city' => [
             'exclude' => true,
             'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.city',
+            'description' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:databaseMapping.default.description',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -176,6 +181,7 @@ return [
         'email' => [
             'exclude' => true,
             'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.email',
+            'description' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:databaseMapping.email.description',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -185,6 +191,7 @@ return [
         'message' => [
             'exclude' => true,
             'label' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:tx_formtools_requests.message',
+            'description' => 'LLL:EXT:form_tools/Resources/Private/Language/locallang_db.xlf:databaseMapping.default.description',
             'config' => [
                 'type' => 'text',
                 'cols' => 50,

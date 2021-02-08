@@ -33,7 +33,7 @@ TYPO3:
                           propertyPath: options.pageUid
                           propertyValidatorsMode: OR
                           propertyValidators:
-                            10: Integer
+                            10: IntegerOrEmpty
                             20: FormElementIdentifierWithinCurlyBracesExclusive
                         9999:
                           identifier: removeButton
