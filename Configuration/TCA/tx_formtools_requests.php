@@ -9,7 +9,7 @@ return [
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'dividers2tabs' => true,
-        'default_sortby' => 'ORDER BY tstamp',
+        'default_sortby' => 'ORDER BY tstamp DESC',
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'languageField' => 'sys_language_uid',
