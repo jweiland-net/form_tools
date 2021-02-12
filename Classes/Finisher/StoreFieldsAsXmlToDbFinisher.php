@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace JWeiland\FormTools\Finisher;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\MathUtility;
 use TYPO3\CMS\Form\Domain\Finishers\Exception\FinisherException;
 use TYPO3\CMS\Form\Domain\Finishers\SaveToDatabaseFinisher;
 use TYPO3\CMS\Form\Domain\Model\FormElements\FormElementInterface;
@@ -37,21 +38,29 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
 
     /**
      * Executes this finisher
-     * @see AbstractFinisher::execute()
      *
+     * @see AbstractFinisher::execute()
      * @throws FinisherException
      */
     protected function executeInternal()
     {
-        $options = [];
-        if (isset($this->options['pageUid'])) {
+        $options = array_filter($this->options, function ($key) {
+            return MathUtility::canBeInterpretedAsInteger($key);
+        }, ARRAY_FILTER_USE_KEY);
+        $namedOptions = array_diff_key($this->options, $options);
+
+        // In form.yaml you can define just one or multiple tables (array with key -) to store data
+        if (empty($options)) {
+            // Add one table configuration to options
             $options[] = $this->options;
-        } else {
-            $options = $this->options;
         }
 
+        // Process each table configuration
         foreach ($options as $optionKey => $option) {
             $this->options = $option;
+            if (!array_key_exists('pageUid', $option)) {
+                $this->options = array_merge($option, $namedOptions);
+            }
             $this->process($optionKey);
         }
     }
@@ -70,13 +79,18 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
         $dataForXml = ['elements' => []];
         $dataForXml['elements'] = $this->getFormValues();
         $this->addEmailFromFormValues($prepareData, $dataForXml['elements']);
+        $this->addPidFromFormValues($prepareData);
 
         $prepareData['xml'] = GeneralUtility::array2xml($dataForXml);
 
-        // Get PID from FormWizard, TCEForms or fallback to default 0
-        $prepareData['pid'] = (int)$this->parseOption('pageUid');
         if (empty($prepareData['pid'])) {
-            $prepareData['pid'] = (int)$GLOBALS['TSFE']->id;
+            // if no default pid was configured through databaseColumnMappings, use pageUid from form wizard
+            $prepareData['pid'] = (int)$this->parseOption('pageUid');
+
+            if (empty($prepareData['pid'])) {
+                // if pid is still empty, fall back to current page
+                $prepareData['pid'] = (int)$GLOBALS['TSFE']->id;
+            }
         }
 
         return $prepareData;
@@ -99,6 +113,24 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
                 $prepareData['email'] = $value;
             }
         }
+    }
+
+    protected function addPidFromFormValues(array &$prepareData): void
+    {
+        // Prio 3: Fall back to current page, if all other checks are false
+        $pid = (int)$GLOBALS['TSFE']->id;
+
+        // Prio 2: Override PID, if a default is configured by databaseColumnMappings
+        if ($prepareData['pid']) {
+            $pid = (int)$prepareData['pid'];
+        }
+
+        // Prio 1: Override PID, if an individual PID was configured in form wizard
+        if ($this->parseOption('pageUid')) {
+            $pid = (int)$this->parseOption('pageUid');
+        }
+
+        $prepareData['pid'] = $pid;
     }
 
     protected function getFormValues(): array
