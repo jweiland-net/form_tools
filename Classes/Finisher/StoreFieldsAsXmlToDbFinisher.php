@@ -44,25 +44,7 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
      */
     protected function executeInternal()
     {
-        $options = array_filter($this->options, function ($key) {
-            return MathUtility::canBeInterpretedAsInteger($key);
-        }, ARRAY_FILTER_USE_KEY);
-        $namedOptions = array_diff_key($this->options, $options);
-
-        // In form.yaml you can define just one or multiple tables (array with key -) to store data
-        if (empty($options)) {
-            // Add one table configuration to options
-            $options[] = $this->options;
-        }
-
-        // Process each table configuration
-        foreach ($options as $optionKey => $option) {
-            $this->options = $option;
-            if (!array_key_exists('pageUid', $option)) {
-                $this->options = array_merge($option, $namedOptions);
-            }
-            $this->process($optionKey);
-        }
+        $this->process(0);
     }
 
     /**
