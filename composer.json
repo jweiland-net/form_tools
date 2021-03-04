@@ -37,6 +37,7 @@
 	},
 	"extra": {
 		"typo3/cms": {
+			"extension-key": "form_tools",
 			"app-dir": ".build",
 			"web-dir": ".build/public"
 		}
