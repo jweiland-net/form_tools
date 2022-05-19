@@ -68,12 +68,8 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
 
         if (empty($prepareData['pid'])) {
             // if no default pid was configured through databaseColumnMappings, use pageUid from form wizard
-            $prepareData['pid'] = (int)$this->parseOption('pageUid');
-
-            if (empty($prepareData['pid'])) {
-                // if pid is still empty, fall back to current page
-                $prepareData['pid'] = (int)$GLOBALS['TSFE']->id;
-            }
+            // if pid is still empty, fall back to current page
+            $prepareData['pid'] = (int)$this->parseOption('pageUid') ?: (int)$GLOBALS['TSFE']->id ?: 0;
         }
 
         return $prepareData;
@@ -89,8 +85,8 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
             $element = $this->getElementByIdentifier($elementIdentifier);
             if (
                 $element instanceof FormElementInterface
-                && $element->getType() === 'Email'
                 && !empty($value)
+                && $element->getType() === 'Email'
                 && GeneralUtility::validEmail($value)
             ) {
                 $prepareData['email'] = $value;
