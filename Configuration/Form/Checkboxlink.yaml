@@ -20,7 +20,7 @@ TYPO3:
                   1611740973: 'EXT:form_tools/Resources/Private/FormFramework/Standard/Frontend/Layouts/'
             Checkboxlink:
               __inheritances:
-                10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
+                10: 'TYPO3.CMS.Form.prototypes.standard.formElementsDefinition.Checkbox'
               formEditor:
                 label: 'Datenschutzhinweis'
                 group: custom
