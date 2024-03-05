@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools" target-language="en">
+    <header/>
+    <body>
+      <trans-unit id="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label" resname="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label">
+        <source>Store fields as XML</source>
+        <target state="needs-translation">Store fields as XML</target>
+      </trans-unit>
+      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label">
+        <source>Store fields as XML</source>
+        <target state="needs-translation">Store fields as XML</target>
+      </trans-unit>
+      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label">
+        <source>Store fields to page UID</source>
+        <target state="needs-translation">Store fields to page UID</target>
+      </trans-unit>
+      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel">
+        <source>Page</source>
+        <target state="needs-translation">Page</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
