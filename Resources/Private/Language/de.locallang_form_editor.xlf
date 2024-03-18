@@ -3,21 +3,21 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools" target-language="de">
     <header/>
     <body>
-      <trans-unit id="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label" resname="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label">
+      <trans-unit id="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label" resname="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label" approved="yes">
         <source>Store fields as XML</source>
-        <target state="needs-translation">Store fields as XML</target>
+        <target state="final">Felder als XML speichern</target>
       </trans-unit>
-      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label">
+      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label" approved="yes">
         <source>Store fields as XML</source>
-        <target state="needs-translation">Store fields as XML</target>
+        <target state="final">Felder als XML speichern</target>
       </trans-unit>
-      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label">
+      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label" approved="yes">
         <source>Store fields to page UID</source>
-        <target state="needs-translation">Store fields to page UID</target>
+        <target state="final">Felder in Seite UID speichern</target>
       </trans-unit>
-      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel">
+      <trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel" approved="yes">
         <source>Page</source>
-        <target state="needs-translation">Page</target>
+        <target state="final">Seite</target>
       </trans-unit>
     </body>
   </file>
