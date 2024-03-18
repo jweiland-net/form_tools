@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools" target-language="sv-SE">
+    <header/>
+    <body>
+      <trans-unit id="tx_formtools_requests.first_name" resname="tx_formtools_requests.first_name">
+        <source>First name</source>
+        <target state="needs-translation">First name</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.last_name" resname="tx_formtools_requests.last_name">
+        <source>Last name</source>
+        <target state="needs-translation">Last name</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.phone" resname="tx_formtools_requests.phone">
+        <source>Phone</source>
+        <target state="needs-translation">Phone</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.address" resname="tx_formtools_requests.address">
+        <source>Street, number</source>
+        <target state="needs-translation">Street, number</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.city" resname="tx_formtools_requests.city">
+        <source>ZIP city</source>
+        <target state="needs-translation">ZIP city</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.email" resname="tx_formtools_requests.email">
+        <source>Email</source>
+        <target state="needs-translation">Email</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.message" resname="tx_formtools_requests.message">
+        <source>Message</source>
+        <target state="needs-translation">Message</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.xml" resname="tx_formtools_requests.xml">
+        <source>Content</source>
+        <target state="needs-translation">Content</target>
+      </trans-unit>
+      <trans-unit id="databaseMapping.default.description" resname="tx_formtools_requests.xml">
+        <source>This field will not be filled automatically in default configuration. To change that you have to configure "mapOnDatabaseColumn" in yaml.</source>
+        <target state="needs-translation">This field will not be filled automatically in default configuration. To change that you have to configure "mapOnDatabaseColumn" in yaml.</target>
+      </trans-unit>
+      <trans-unit id="databaseMapping.email.description" resname="tx_formtools_requests.xml">
+        <source>This field will be filled automatically by the first found text field which is of type email. You can override that when you configure "mapOnDatabaseColumn" in yaml.</source>
+        <target state="needs-translation">This field will be filled automatically by the first found text field which is of type email. You can override that when you configure "mapOnDatabaseColumn" in yaml.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
