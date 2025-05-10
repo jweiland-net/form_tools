@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools" target-language="fr">
+    <header/>
+    <body>
+      <trans-unit id="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.label" resname="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.label">
+        <source>Store fields as XML</source>
+        <target state="needs-translation">Store fields as XML</target>
+      </trans-unit>
+      <trans-unit id="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.pageUid.label" resname="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.pageUid.label">
+        <source>Store fields to page UID</source>
+        <target state="needs-translation">Store fields to page UID</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

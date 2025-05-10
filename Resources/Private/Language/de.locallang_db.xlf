@@ -1,49 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools">
-		<header/>
-		<body>
-			<trans-unit id="tx_formtools_requests.first_name" resname="tx_formtools_requests.first_name">
-				<source>First name</source>
-				<target>Vorname</target>
-			</trans-unit>
-			<trans-unit id="tx_formtools_requests.last_name" resname="tx_formtools_requests.last_name">
-				<source>Last name</source>
-				<target>Nachname</target>
-			</trans-unit>
-			<trans-unit id="tx_formtools_requests.phone" resname="tx_formtools_requests.phone">
-				<source>Phone</source>
-				<target>Telefon</target>
-			</trans-unit>
-			<trans-unit id="tx_formtools_requests.address" resname="tx_formtools_requests.address">
-				<source>Street, number</source>
-				<target>Straße Hausnummer</target>
-			</trans-unit>
-			<trans-unit id="tx_formtools_requests.city" resname="tx_formtools_requests.city">
-				<source>ZIP city</source>
-				<target>PLZ Ort</target>
-			</trans-unit>
-			<trans-unit id="tx_formtools_requests.email" resname="tx_formtools_requests.email">
-				<source>Email</source>
-				<target>E-Mail</target>
-			</trans-unit>
-			<trans-unit id="tx_formtools_requests.message" resname="tx_formtools_requests.message">
-				<source>Message</source>
-				<target>Nachricht</target>
-			</trans-unit>
-			<trans-unit id="tx_formtools_requests.xml" resname="tx_formtools_requests.xml">
-				<source>Content</source>
-				<target>Inhalt</target>
-			</trans-unit>
-
-			<trans-unit id="databaseMapping.default.description" resname="tx_formtools_requests.xml">
-				<source>This field will not be filled automatically in default configuration. To change that you have to configure "mapOnDatabaseColumn" in yaml.</source>
-				<target>Dieses Feld wird im Rahmen der Standardkonfiguration nicht automatisch befüllt. Um das zu ändern muss die Option "mapOnDatabaseColumn" in der YAML Konfiguration manuell hinzugefügt werden.</target>
-			</trans-unit>
-			<trans-unit id="databaseMapping.email.description" resname="tx_formtools_requests.xml">
-				<source>This field will be filled automatically by the first found text field which is of type email. You can override that when you configure "mapOnDatabaseColumn" in yaml.</source>
-				<target>Dieses Feld wird automatisch mit dem Wert des ersten Textfeldes vom Typ Email befüllt. Um das zu ändern muss die Option "mapOnDatabaseColumn" in der YAML Konfiguration manuell angepasst werden.</target>
-			</trans-unit>
-		</body>
-	</file>
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tx_formtools_requests.first_name" resname="tx_formtools_requests.first_name" approved="yes">
+        <source>First name</source>
+        <target state="final">Vorname</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.last_name" resname="tx_formtools_requests.last_name" approved="yes">
+        <source>Last name</source>
+        <target state="final">Nachname</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.phone" resname="tx_formtools_requests.phone" approved="yes">
+        <source>Phone</source>
+        <target state="final">Telefon</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.address" resname="tx_formtools_requests.address" approved="yes">
+        <source>Street, number</source>
+        <target state="final">Straße, Hausnummer</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.city" resname="tx_formtools_requests.city" approved="yes">
+        <source>ZIP city</source>
+        <target state="final">PLZ Ort</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.email" resname="tx_formtools_requests.email" approved="yes">
+        <source>Email</source>
+        <target state="final">E-Mail</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.message" resname="tx_formtools_requests.message" approved="yes">
+        <source>Message</source>
+        <target state="final">Nachricht</target>
+      </trans-unit>
+      <trans-unit id="tx_formtools_requests.xml" resname="tx_formtools_requests.xml" approved="yes">
+        <source>Content</source>
+        <target state="final">Inhalt</target>
+      </trans-unit>
+      <trans-unit id="databaseMapping.default.description" resname="tx_formtools_requests.xml" approved="yes">
+        <source>This field will not be filled automatically in default configuration. To change that you have to configure "mapOnDatabaseColumn" in yaml.</source>
+        <target state="final">Dieses Feld wird nicht automatisch in der Standardkonfiguration ausgefüllt. Um dies zu ändern, müssen Sie "mapOnDatabaseColumn" in yaml konfigurieren.</target>
+      </trans-unit>
+      <trans-unit id="databaseMapping.email.description" resname="tx_formtools_requests.xml" approved="yes">
+        <source>This field will be filled automatically by the first found text field which is of type email. You can override that when you configure "mapOnDatabaseColumn" in yaml.</source>
+        <target state="final">Dieses Feld wird automatisch durch das erste gefundene Textfeld des Typs E-Mail ausgefüllt. Sie können dies überschreiben, wenn Sie "mapOnDatabaseColumn" in yaml konfigurieren.</target>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>
