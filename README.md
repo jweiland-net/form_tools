@@ -80,3 +80,9 @@ Copy the finisher to your form YAML file.
 * Some fields like `first_name` till `message` already exist in the Datatbase. You can map your renderables to them.
 * Set the pid where your mails should be saved (e.g. the same where your plugin resides).
 * The database field `xml` will automaticaly contain all posted data.
+
+## 3 Support
+
+Free Support is available via [GitHub Issue Tracker](https://github.com/jweiland-net/form_tools/issues).
+
+For commercial support, please contact us at [support@jweiland.net](support@jweiland.net).
