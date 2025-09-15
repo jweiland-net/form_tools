@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z"
+				product-name="form_tools">
 		<header/>
 		<body>
 			<trans-unit id="tx_formtools_requests.first_name" resname="tx_formtools_requests.first_name">
@@ -37,12 +38,20 @@
 			</trans-unit>
 
 			<trans-unit id="databaseMapping.default.description" resname="tx_formtools_requests.xml">
-				<source>This field will not be filled automatically in default configuration. To change that you have to configure "mapOnDatabaseColumn" in yaml.</source>
-				<target>Dieses Feld wird im Rahmen der Standardkonfiguration nicht automatisch befüllt. Um das zu ändern muss die Option "mapOnDatabaseColumn" in der YAML Konfiguration manuell hinzugefügt werden.</target>
+				<source>This field will not be filled automatically in default configuration. To change that you have to
+					configure "mapOnDatabaseColumn" in yaml.
+				</source>
+				<target>Dieses Feld wird im Rahmen der Standardkonfiguration nicht automatisch befüllt. Um das zu ändern muss
+					die Option "mapOnDatabaseColumn" in der YAML Konfiguration manuell hinzugefügt werden.
+				</target>
 			</trans-unit>
 			<trans-unit id="databaseMapping.email.description" resname="tx_formtools_requests.xml">
-				<source>This field will be filled automatically by the first found text field which is of type email. You can override that when you configure "mapOnDatabaseColumn" in yaml.</source>
-				<target>Dieses Feld wird automatisch mit dem Wert des ersten Textfeldes vom Typ Email befüllt. Um das zu ändern muss die Option "mapOnDatabaseColumn" in der YAML Konfiguration manuell angepasst werden.</target>
+				<source>This field will be filled automatically by the first found text field which is of type email. You can
+					override that when you configure "mapOnDatabaseColumn" in yaml.
+				</source>
+				<target>Dieses Feld wird automatisch mit dem Wert des ersten Textfeldes vom Typ Email befüllt. Um das zu ändern
+					muss die Option "mapOnDatabaseColumn" in der YAML Konfiguration manuell angepasst werden.
+				</target>
 			</trans-unit>
 		</body>
 	</file>

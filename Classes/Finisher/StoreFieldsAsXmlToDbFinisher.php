@@ -21,6 +21,7 @@ use TYPO3\CMS\Form\Domain\Model\FormElements\FormElementInterface;
  * and extends it with the functionality to store all other
  * fields not available in DB as XML structure in column `xml`
  */
+
 class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
 {
     /**
@@ -38,8 +39,8 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
     /**
      * Executes this finisher
      *
-     * @see AbstractFinisher::execute()
      * @throws FinisherException
+     * @see AbstractFinisher::execute()
      */
     protected function executeInternal()
     {

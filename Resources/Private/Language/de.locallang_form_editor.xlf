@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z" product-name="form_tools">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-10-19T09:00:00Z"
+				product-name="form_tools">
 		<header/>
 		<body>
-			<trans-unit id="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label" resname="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label">
+			<trans-unit id="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label"
+									resname="formEditor.elements.Form.editor.finishers.StoreFieldsAsXmlToDb.label">
 				<source>Store fields as XML</source>
 				<target>Speichere Felder als XML</target>
 			</trans-unit>
-			<trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label">
+			<trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label"
+									resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.header.label">
 				<source>Store fields as XML</source>
 				<target>Speichere Felder als XML</target>
 			</trans-unit>
-			<trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label">
+			<trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label"
+									resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.label">
 				<source>Store fields to page UID</source>
 				<target>Speichere Felder aus Seiten UID</target>
 			</trans-unit>
-			<trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel" resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel">
+			<trans-unit id="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel"
+									resname="formEditor.elements.Form.finisher.StoreFieldsAsXmlToDb.editor.pageUid.buttonLabel">
 				<source>Page</source>
 				<target>Seite</target>
 			</trans-unit>

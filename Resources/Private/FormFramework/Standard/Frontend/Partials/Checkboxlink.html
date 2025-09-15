@@ -6,12 +6,12 @@
         <div class="form-check checkboxlink">
             <label class="{element.properties.elementClassAttribute} form-check-label checkboxlink" for="{element.uniqueIdentifier}">
                 <f:form.checkbox
-                        property="{element.identifier}"
-                        id="{element.uniqueIdentifier}"
-                        class="{element.properties.elementClassAttribute}"
-                        value="{element.properties.value}"
-                        errorClass="{element.properties.elementErrorClassAttribute}"
-                        additionalAttributes="{formvh:translateElementProperty(element: element, property: 'fluidAdditionalAttributes')}"
+                    property="{element.identifier}"
+                    id="{element.uniqueIdentifier}"
+                    class="{element.properties.elementClassAttribute}"
+                    value="{element.properties.value}"
+                    errorClass="{element.properties.elementErrorClassAttribute}"
+                    additionalAttributes="{formvh:translateElementProperty(element: element, property: 'fluidAdditionalAttributes')}"
                 />
                 <f:comment>
                     <!--
@@ -22,7 +22,13 @@
                     {formvh:translateElementProperty(element: element, property: 'label')}
                     -->
                 </f:comment>
-                <span>Ich habe die <f:link.page pageUid="{f:cObject(typoscriptObjectPath:'lib.formLegalUid')}" target="_blank">Datenschutzerklärung</f:link.page> gelesen und stimme dieser zu. <f:if condition="{element.required}"><f:render partial="Field/Required" /></f:if></span>
+                <span>Ich habe die
+                    <f:link.page pageUid="{f:cObject(typoscriptObjectPath:'lib.formLegalUid')}" target="_blank">Datenschutzerklärung</f:link.page>
+                    gelesen und stimme dieser zu.
+                    <f:if condition="{element.required}">
+                        <f:render partial="Field/Required"/>
+                    </f:if>
+                </span>
             </label>
         </div>
     </f:render>
