@@ -6,7 +6,7 @@
 [![Monthly Downloads][extension-monthly-downloads]][extension-packagist-url]
 [![TYPO3 13.4][TYPO3-shield]][TYPO3-13-url]
 
-![Build Status](https://github.com/jweiland-net/form_tools/workflows/CI/badge.svg)
+![Build Status](https://github.com/jweiland-net/form_tools/actions/workflows/ci.yml/badge.svg)
 
 Form_tools is an extension for TYPO3 CMS. It collects some tools for the TYPO3 FormFramework.
 
