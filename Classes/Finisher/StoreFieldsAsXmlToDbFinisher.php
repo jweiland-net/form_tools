@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the package jweiland/form_tools.
+ * This file is part of the package jweiland/form-tools.
  *
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
@@ -21,6 +21,7 @@ use TYPO3\CMS\Form\Domain\Model\FormElements\FormElementInterface;
  * and extends it with the functionality to store all other
  * fields not available in DB as XML structure in column `xml`
  */
+
 class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
 {
     /**
@@ -38,8 +39,8 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
     /**
      * Executes this finisher
      *
-     * @see AbstractFinisher::execute()
      * @throws FinisherException
+     * @see AbstractFinisher::execute()
      */
     protected function executeInternal()
     {
@@ -123,7 +124,7 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
             ) {
                 $properties = $element->getProperties();
                 $elements[$elementIdentifier] = $value->format(
-                    !empty($properties['dateFormat']) ? $properties['dateFormat'] : \DateTime::W3C
+                    !empty($properties['dateFormat']) ? $properties['dateFormat'] : \DateTime::W3C,
                 );
             }
         }

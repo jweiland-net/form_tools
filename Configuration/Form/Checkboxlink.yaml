@@ -25,7 +25,7 @@ TYPO3:
                 label: 'Datenschutzhinweis'
                 group: custom
                 groupSorting: 1010
-                iconIdentifier: 'Checkboxlink-icon'
+                iconIdentifier: 'checkboxlink-icon'
                 predefinedDefaults:
                   properties:
                     value: '1'

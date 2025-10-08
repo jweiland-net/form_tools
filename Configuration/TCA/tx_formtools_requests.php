@@ -1,4 +1,14 @@
 <?php
+
+/*
+ * This file is part of the package jweiland/form-tools.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
+defined('TYPO3') or die;
+
 return [
     'ctrl' => [
         'title' => 'Stored Forms',
@@ -7,8 +17,6 @@ return [
         'label_alt_force' => true,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
-        'dividers2tabs' => true,
         'default_sortby' => 'ORDER BY tstamp DESC',
         'versioningWS' => true,
         'origUid' => 't3_origuid',
@@ -24,9 +32,6 @@ return [
         'searchFields' => 'first_name, last_name, telephone, address, city, email, message, xml',
         'iconfile' => 'EXT:form_tools/Resources/Public/Icons/tx_formtools_requests.svg',
     ],
-    'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, first_name, last_name, telephone, address, city, email, message, xml',
-    ],
     'types' => [
         '0' => [
             'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, first_name, last_name, telephone, address, city, email, message, xml,
@@ -37,54 +42,41 @@ return [
     'palettes' => [
         'access' => [
             'showitem' => 'starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel',
-        ]
+        ],
     ],
     'columns' => [
         'sys_language_uid' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'special' => 'languages',
-                'items' => [
-                    [
-                        'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                        -1,
-                        'flags-multiple'
-                    ],
-                ],
-                'default' => 0,
-            ]
+            'config' => ['type' => 'language'],
         ],
         'l10n_parent' => [
-            'exclude' => true,
             'displayCond' => 'FIELD:sys_language_uid:>:0',
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', 0],
+                    ['label' => '', 'value' => 0],
                 ],
                 'foreign_table' => 'tx_formtools_requests',
                 'foreign_table_where' => 'AND tx_formtools_requests.pid=###CURRENT_PID### AND tx_formtools_requests.sys_language_uid IN (-1,0)',
                 'default' => 0,
-            ]
+            ],
         ],
         'l10n_diffsource' => [
             'config' => [
                 'type' => 'passthrough',
-                'default' => ''
-            ]
+                'default' => '',
+            ],
         ],
         't3ver_label' => [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'max' => 255
-            ]
+                'max' => 255,
+            ],
         ],
         'hidden' => [
             'exclude' => true,
@@ -94,12 +86,12 @@ return [
                 'renderType' => 'checkboxToggle',
                 'items' => [
                     [
-                        0 => '',
+                        'label' => '',
                         1 => '',
-                        'invertStateDisplay' => true
-                    ]
+                        'invertStateDisplay' => true,
+                    ],
                 ],
-            ]
+            ],
         ],
         'starttime' => [
             'exclude' => true,
@@ -108,10 +100,10 @@ return [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
                 'eval' => 'datetime,int',
-                'default' => 0
+                'default' => 0,
             ],
             'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly'
+            'l10n_display' => 'defaultAsReadonly',
         ],
         'endtime' => [
             'exclude' => true,
@@ -122,11 +114,11 @@ return [
                 'eval' => 'datetime,int',
                 'default' => 0,
                 'range' => [
-                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
-                ]
+                    'upper' => mktime(0, 0, 0, 1, 1, 2038),
+                ],
             ],
             'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly'
+            'l10n_display' => 'defaultAsReadonly',
         ],
         'first_name' => [
             'exclude' => true,
@@ -135,7 +127,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'last_name' => [
@@ -145,7 +137,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'telephone' => [
@@ -155,7 +147,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'address' => [
@@ -165,7 +157,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'city' => [
@@ -175,7 +167,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'email' => [
@@ -185,7 +177,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim',
             ],
         ],
         'message' => [
@@ -205,7 +197,7 @@ return [
                 'type' => 'text',
                 'cols' => 50,
                 'rows' => 5,
-                'readOnly' => 1
+                'readOnly' => 1,
             ],
         ],
     ],
