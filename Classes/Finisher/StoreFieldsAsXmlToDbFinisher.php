@@ -86,7 +86,7 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
 
     protected function addEmailFromFormValues(array &$prepareData, array $elements = []): void
     {
-        if ($prepareData['email']) {
+        if (isset($prepareData['email']) && $prepareData['email'] !== '') {
             return;
         }
 
