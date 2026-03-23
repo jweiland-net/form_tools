@@ -109,7 +109,7 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
         $pid = (int)$GLOBALS['TSFE']->id;
 
         // Prio 2: Override PID, if a default is configured by databaseColumnMappings
-        if ($prepareData['pid']) {
+        if (isset($prepareData['pid']) && $prepareData['pid'] !== '') {
             $pid = (int)$prepareData['pid'];
         }
 
