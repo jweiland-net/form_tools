@@ -25,10 +25,10 @@
 	"require": {
 		"ext-dom": "*",
 		"ext-libxml": "*",
-		"typo3/cms-core": "^13.4.0"
+		"typo3/cms-core": "^12.4.0"
 	},
 	"require-dev": {
-		"ergebnis/composer-normalize": "^2.44",
+		"ergebnis/composer-normalize": "^2.43",
 		"friendsofphp/php-cs-fixer": "^3.14",
 		"phpstan/phpstan": "^1.10"
 	},

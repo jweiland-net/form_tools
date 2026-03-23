@@ -54,23 +54,31 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
      * @param array $databaseData
      * @return mixed
      */
-    protected function prepareData(array $elementsConfiguration, array $databaseData)
+    protected function prepareData(array $elementsConfiguration, array $databaseData): array
     {
         $prepareData = parent::prepareData($elementsConfiguration, $databaseData);
 
-        $dataForXml = ['elements' => []];
-        $dataForXml['elements'] = $this->getFormValues();
+        $dataForXml = ['elements' => $this->getFormValues()];
         $this->addEmailFromFormValues($prepareData, $dataForXml['elements']);
         $this->addPidFromFormValues($prepareData);
+
         $prepareData['tstamp'] = $prepareData['tstamp'] ?: time();
         $prepareData['crdate'] = $prepareData['crdate'] ?: time();
-
         $prepareData['xml'] = GeneralUtility::array2xml($dataForXml);
 
         if (empty($prepareData['pid'])) {
+            $pageUid = (int)$this->parseOption('pageUid');
+
+            if ($pageUid === 0 && isset($GLOBALS['TYPO3_REQUEST'])) {
+                $routingAspect = $GLOBALS['TYPO3_REQUEST']->getAttribute('routing');
+                if ($routingAspect) {
+                    $pageUid = $routingAspect->getPageId();
+                }
+            }
+
             // if no default pid was configured through databaseColumnMappings, use pageUid from form wizard
             // if pid is still empty, fall back to current page
-            $prepareData['pid'] = (int)$this->parseOption('pageUid') ?: (int)$GLOBALS['TSFE']->id ?: 0;
+            $prepareData['pid'] = $pageUid ?: (int)($GLOBALS['TSFE']->id ?? 0);
         }
 
         return $prepareData;
