@@ -62,8 +62,9 @@ class StoreFieldsAsXmlToDbFinisher extends SaveToDatabaseFinisher
         $this->addEmailFromFormValues($prepareData, $dataForXml['elements']);
         $this->addPidFromFormValues($prepareData);
 
-        $prepareData['tstamp'] = $prepareData['tstamp'] ?: time();
-        $prepareData['crdate'] = $prepareData['crdate'] ?: time();
+
+        $prepareData['tstamp'] = !empty($prepareData['tstamp']) ? $prepareData['tstamp'] : time();
+        $prepareData['crdate'] = !empty($prepareData['crdate']) ? $prepareData['crdate'] : time();
         $prepareData['xml'] = GeneralUtility::array2xml($dataForXml);
 
         if (empty($prepareData['pid'])) {
