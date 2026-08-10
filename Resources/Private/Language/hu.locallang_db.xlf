@@ -5,51 +5,49 @@
     <body>
       <trans-unit id="tx_formtools_requests.first_name" resname="tx_formtools_requests.first_name">
         <source>First name</source>
-        <target state="needs-translation">First name</target>
+        <target state="translated">Keresztnév</target>
       </trans-unit>
       <trans-unit id="tx_formtools_requests.last_name" resname="tx_formtools_requests.last_name">
         <source>Last name</source>
-        <target state="needs-translation">Last name</target>
+        <target state="translated">Vezetéknév</target>
       </trans-unit>
       <trans-unit id="tx_formtools_requests.phone" resname="tx_formtools_requests.phone">
         <source>Phone</source>
-        <target state="needs-translation">Phone</target>
+        <target state="translated">Telefon</target>
       </trans-unit>
       <trans-unit id="tx_formtools_requests.address" resname="tx_formtools_requests.address">
         <source>Street, number</source>
-        <target state="needs-translation">Street, number</target>
+        <target state="translated">Utca, házszám</target>
       </trans-unit>
       <trans-unit id="tx_formtools_requests.city" resname="tx_formtools_requests.city">
         <source>ZIP city</source>
-        <target state="needs-translation">ZIP city</target>
+        <target state="translated">Irányítószám, város</target>
       </trans-unit>
       <trans-unit id="tx_formtools_requests.email" resname="tx_formtools_requests.email">
         <source>Email</source>
-        <target state="needs-translation">Email</target>
+        <target state="translated">E-mail</target>
       </trans-unit>
       <trans-unit id="tx_formtools_requests.message" resname="tx_formtools_requests.message">
         <source>Message</source>
-        <target state="needs-translation">Message</target>
+        <target state="translated">Üzenet</target>
       </trans-unit>
       <trans-unit id="tx_formtools_requests.xml" resname="tx_formtools_requests.xml">
         <source>Content</source>
-        <target state="needs-translation">Content</target>
+        <target state="translated">Tartalom</target>
       </trans-unit>
       <trans-unit id="databaseMapping.default.description" resname="tx_formtools_requests.xml">
         <source>This field will not be filled automatically in default configuration. To change that you have to
 					configure "mapOnDatabaseColumn" in yaml.
 				</source>
-        <target state="needs-translation">This field will not be filled automatically in default configuration. To change that you have to
-					configure "mapOnDatabaseColumn" in yaml.
-				</target>
+        <target state="translated">Ez a mező nem lesz automatikusan kitöltve az alapértelmezett konfigurációban. Ennek megváltoztatásához be kell állítanod a „mapOnDatabaseColumn” értéket a yaml-ben.
+						</target>
       </trans-unit>
       <trans-unit id="databaseMapping.email.description" resname="tx_formtools_requests.xml">
         <source>This field will be filled automatically by the first found text field which is of type email. You can
 					override that when you configure "mapOnDatabaseColumn" in yaml.
 				</source>
-        <target state="needs-translation">This field will be filled automatically by the first found text field which is of type email. You can
-					override that when you configure "mapOnDatabaseColumn" in yaml.
-				</target>
+        <target state="translated">Ezt a mezőt automatikusan kitölti az első megtalált, e-mail típusú szövegmező. Ezt felülírhatod, ha beállítod a „mapOnDatabaseColumn” értéket a yaml-ben.
+						</target>
       </trans-unit>
     </body>
   </file>
