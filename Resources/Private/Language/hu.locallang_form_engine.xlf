@@ -5,11 +5,11 @@
     <body>
       <trans-unit id="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.label" resname="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.label">
         <source>Store fields as XML</source>
-        <target state="needs-translation">Store fields as XML</target>
+        <target state="translated">Mezők tárolása XML-ként</target>
       </trans-unit>
       <trans-unit id="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.pageUid.label" resname="tt_content.finishersDefinition.StoreFieldsAsXmlToDb.pageUid.label">
         <source>Store fields to page UID</source>
-        <target state="needs-translation">Store fields to page UID</target>
+        <target state="translated">Mezők tárolása oldal UID-ben</target>
       </trans-unit>
     </body>
   </file>
